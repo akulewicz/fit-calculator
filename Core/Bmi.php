@@ -1,15 +1,17 @@
 <?php
 
+namespace Core;
+
 class BMI
 {
-    private $weight;
     private $height;
+    private $weight;
     private $bmi;
 
-    public function __construct(int $weight, int $height)
+    public function __construct(int $height, int $weight)
     {
-        $this->weight = $weight;
         $this->height = $height;
+        $this->weight = $weight;
     }
 
     public function calculate():float
