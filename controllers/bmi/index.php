@@ -1,3 +1,3 @@
 <?php
 
-echo 'Działa';
+view('bmi/index.view.php');
