@@ -1,6 +1,6 @@
 <?php
 
-use Core\Bmi;
+use Core\BMI;
 
 $height = $_POST['height'];
 $weight = $_POST['weight'];
@@ -9,4 +9,6 @@ $bmi = new BMI($height, $weight);
 
 $result = $bmi->calculate();
 
-dd($result);
+view('bmi/index.view.php', [
+    'result' => $result
+]);

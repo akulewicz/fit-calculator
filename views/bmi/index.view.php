@@ -31,7 +31,7 @@
             <button class="bmi-form__button">Oblicz swoje BMI</button>
         </form>
         <div class="result-box">
-            <p>BMI wynosi: - </p>
+            <p>BMI wynosi: <?= $result ?? '-' ?></p>
         </div>
     </section>
     
