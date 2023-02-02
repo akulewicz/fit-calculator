@@ -4,7 +4,7 @@ class Router
 {
     private $routes = [];
 
-    public function get(string $uri, string $controller)
+    public function get(string $uri, string $controller): void
     {
         $this->routes[] = [
             'uri' => $uri,
@@ -13,10 +13,19 @@ class Router
         ];
     }
 
-    public function route(string $uri) : void
+    public function post(string $uri, string $controller): void
+    {
+        $this->routes[] = [
+            'uri' => $uri,
+            'controller' => $controller,
+            'method' => 'POST'
+        ];
+    }
+
+    public function route(string $uri, string $method): void
     {
         foreach ($this->routes as $route) {
-            if ($uri === $route['uri']) {
+            if ($uri === $route['uri'] && strtoupper($method) === $route['method']) {
                 require base_path($route['controller']);
             }
         }

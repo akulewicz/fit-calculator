@@ -1,6 +1,6 @@
 <?php
 
-function dd(string $value) {
+function dd($value) {
     echo '<pre>';
     var_dump($value);
     echo '</pre>';

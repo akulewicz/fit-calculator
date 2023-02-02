@@ -12,9 +12,11 @@ $router = new Router();
 
 require base_path('routes.php');
 
-$uri = $_SERVER['REQUEST_URI'];
+$uri = parse_url($_SERVER['REQUEST_URI'])['path'];
 
-$router->route($uri);
+$method = $_SERVER['REQUEST_METHOD'];
+
+$router->route($uri, $method);
 
 $bmi = new BMI(93, 183);
 
