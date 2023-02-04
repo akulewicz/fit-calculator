@@ -1,0 +1,126 @@
+@import url('normalize.css');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.top-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+    border-bottom: 1px solid rgb(191, 191, 191);
+    padding: 0 50px;
+    margin-bottom: 70px;
+}
+
+.top-navigation__list {
+    display: flex;
+    list-style: none;
+}
+
+.top-navigation__item {
+    margin-left: 70px;
+    text-transform: uppercase;
+}
+
+.logo {
+    color: #204982;
+    font-size: 36px;
+}
+
+.logo__icon {
+    margin-right: 10px;
+    font-size: 42px;
+}
+
+.top-navigation__link {
+    text-decoration: none;
+    color: #204982;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+    font-size: 18px;
+    transition: all 0.3s;
+}
+
+.calculator {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.calculator__heading {
+    margin-top: 20px;
+}
+
+.top-navigation__link:hover {
+    color: #112542;
+}
+
+.calculator__columns {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    border: 1px solid #1a3b6974;
+    border-radius: 10px;
+}
+
+.calculator__form {
+    padding: 40px;
+}
+
+.index-description {
+    background-color: #1A3B69;
+    color: #fff;
+    padding: 40px;
+    line-height: 1.5;
+    border-radius: 10px 0 0 10px;
+}
+
+.index-description__heading {
+    font-size: 32px;
+    margin-top: 20px;
+
+}
+
+.bmi-form__inputs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 20px;
+}
+
+.bmi-form__item {
+    display: flex;
+    flex-direction: column;
+}
+
+.bmi-form__input {
+    margin-top: 5px;
+    border: 1px solid grey;
+    padding: 5px;
+}
+
+.bmi-form__button {
+    background-color: #6A8214;
+    color: #fff;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    letter-spacing: 0.2px;
+    margin: 10px 0;
+}
+
+.result-box {
+    font-size: 18px;
+}
+
+.result {
+    font-weight: 700;
+    font-size: 20px;
+    margin-left: 10px;
+}

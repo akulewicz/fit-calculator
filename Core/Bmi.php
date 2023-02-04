@@ -17,6 +17,6 @@ class BMI
     public function calculate():float
     {
         $this->bmi = $this->weight / ($this->height*$this->height/10000);
-        return $this->bmi;
+        return round($this->bmi, 1);
     }
 }
