@@ -33,20 +33,22 @@
                 <p class="calculator__description">Uzupełnij dane i sprawdź swoje BMI</p>
                 <form class="bmi-form" method="POST">
                     <div class="bmi-form__inputs">
-                        <p class="bmi-form__item">
+                        <div class="bmi-form__item">
                             <label for="height">Wzrost</label>
-                            <input class="bmi-form__input" type="text" name="height" id="height" placeholder="cm">
-                        </p>
-                        <p class="bmi-form__item">
+                            <input class="bmi-form__input" type="text" name="height" id="height" placeholder="cm" value="<?= $_POST['height'] ?? '' ?>">
+                            <p class="input-error"><?= $errors['height'] ?? '' ?></p>
+                        </div>
+                        <div class="bmi-form__item">
                             <label for="weight">Waga</label>
-                            <input class="bmi-form__input" type="text" name="weight" id="weight" placeholder="kg">
-                        </p>
+                            <input class="bmi-form__input" type="text" name="weight" id="weight" placeholder="kg" value="<?= $_POST['weight'] ?? '' ?>">
+                            <p class="input-error"><?= $errors['weight'] ?? '' ?></p>
+                        </div>
                     </div>
                     <button class="bmi-form__button">Oblicz swoje BMI</button>
                 </form>
                 <div class="result-box">
                     <p>Twoje BMI wynosi: <span class="result"><?= $result ?? '-' ?></span></p>
-                    <p>Oznacza to: -</p>
+                    <p>Oznacza to: <span class="result <?= $definition['color'] ?? '' ?>"><?= $definition['text'] ?? '-' ?></span></p></p>
                 </div>
             </div>
         </div>

@@ -99,6 +99,7 @@ body {
 }
 
 .bmi-form__input {
+    display: block;
     margin-top: 5px;
     border: 1px solid grey;
     padding: 5px;
@@ -115,6 +116,12 @@ body {
     margin: 10px 0;
 }
 
+.input-error {
+    color: red;
+    font-size: 14px;
+    margin-top: 3px;
+}
+
 .result-box {
     font-size: 18px;
 }
@@ -123,4 +130,16 @@ body {
     font-weight: 700;
     font-size: 20px;
     margin-left: 10px;
+}
+
+.green {
+    color: green;
+}
+
+.red {
+    color: #B31212;
+}
+
+.orange {
+    color: #FF530D;
 }

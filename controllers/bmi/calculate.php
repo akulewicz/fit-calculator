@@ -1,14 +1,28 @@
 <?php
 
 use Core\BMI;
+use Core\Validator;
+
+$errors = [];
 
 $height = $_POST['height'];
 $weight = $_POST['weight'];
 
-$bmi = new BMI($height, $weight);
+$errors['height'] = Validator::number($height) ? '' : 'Podaj prawidłowy wzrost';
+$errors['weight'] = Validator::number($weight) ? '' : 'Podaj prawidłową wagę';
 
-$result = $bmi->calculate();
+$invalid = implode($errors);
+
+if(!$invalid) {
+    $bmi = new BMI($height, $weight);
+    $result = $bmi->calculate();
+    $definition = $bmi->getDefinition();
+}
 
 view('bmi/index.view.php', [
-    'result' => $result
+    'result' => $result ?? '',
+    'definition' => $definition ?? '',
+    'errors' => $errors,
 ]);
+
+
